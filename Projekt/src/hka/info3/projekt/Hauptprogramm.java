@@ -5,7 +5,7 @@ import java.time.LocalDate;
 
 public class Hauptprogramm {
 	    public static void main(String[] args) {
-	        // Initialisierung der Manager
+	        // Initialisierung der Manager :::
 	        TeamManager teamManager = new TeamManager();
 	        EventManager eventManager = new EventManager();
 
