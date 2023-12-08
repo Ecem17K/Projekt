@@ -10,16 +10,6 @@ public class ErdbebenEvent extends Event {
         this.staerke = staerke;
     }
 
-    @Override
-    public void ausloesen() {
-        System.out.println("Erdbeben ausgelöst: " + getEventName() + " in " + getDescription().getOrt() + " am " + getDatum());
-    }
-
-    @Override
-    public void auswirkungenBerechnen() {
-        System.out.println("Berechnung der Auswirkungen des Erdbebens in " + getDescription().getOrt());
-    }
-
     public int getStaerke() {
         return staerke;
     }

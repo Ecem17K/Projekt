@@ -14,16 +14,6 @@ public class TsunamiEvent extends Event {
         this.breite = breite;
     }
 
-    @Override
-    public void ausloesen() {
-        System.out.println("Tsunami ausgelöst: " + getEventName() + " in " + getDescription().getOrt() + " am " + getDatum());
-    }
-
-    @Override
-    public void auswirkungenBerechnen() {
-        System.out.println("Berechnung der Auswirkungen des Tsunamis in " + getDescription().getOrt());
-    }
-
     public int getHoehe() {
         return hoehe;
     }

@@ -10,16 +10,6 @@ public class WaldbrandEvent extends Event {
         this.ausdehnung = ausdehnung;
     }
 
-    @Override
-    public void ausloesen() {
-        System.out.println("Waldbrand ausgelöst: " + getEventName() + " in " + getDescription().getOrt() + " am " + getDatum());
-    }
-
-    @Override
-    public void auswirkungenBerechnen() {
-        System.out.println("Berechnung der Auswirkungen des Waldbrands in " + getDescription().getOrt());
-    }
-
     public int getAusdehnung() {
         return ausdehnung;
     }

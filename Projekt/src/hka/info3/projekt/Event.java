@@ -33,9 +33,6 @@ public abstract class Event {
         }
     }
 
-    public abstract void ausloesen();
-    public abstract void auswirkungenBerechnen();
-
     public String getEventId() {
         return eventId;
     }
