@@ -5,11 +5,11 @@ import java.time.LocalDate;
 
 public class Hauptprogramm {
 	    public static void main(String[] args) {
-	        // Initialisierung der Manager :::
+	        
 	        TeamManager teamManager = new TeamManager();
 	        EventManager eventManager = new EventManager();
 
-	        // Teamleiter und Wissenschaftler erstellen
+	        // Teamleiter und Wissenschaftler
 	        Scientist teamLeiter = new Scientist("Dr. Müller", "Geophysik", 15);
 	        Scientist mitglied1 = new Scientist("Dr. Schmidt", "Meteorologie", 10);
 	        Scientist mitglied2 = new Scientist("Dr. Fischer", "Hydrologie", 8);
@@ -79,7 +79,7 @@ public class Hauptprogramm {
 	            System.out.println("> Datum der Katastrophe: " + registriertesEreignis.getDatum());
 	            System.out.println("> Beschreibung: " + registriertesEreignis.getDescription().getBesonderheit());
 
-	            // Spezifische Details für verschiedene Ereignistypen mit Einheiten
+	            
 	            if (registriertesEreignis instanceof ErdbebenEvent) {
 	                ErdbebenEvent erdbeben = (ErdbebenEvent) registriertesEreignis;
 	                System.out.println("> Stärke: " + erdbeben.getStaerke() + " (Richterskala)");
