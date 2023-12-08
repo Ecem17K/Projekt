@@ -32,8 +32,8 @@ public class Hauptprogramm {
 	        String tsunamiId = UUID.randomUUID().toString();
 	        eventManager.ereignisRegistrieren(new TsunamiEvent(tsunamiId, 9, "Jakarta", LocalDate.of(2004, 12, 26), 15, 80, 300, "Hohe Wellen"));
 	        
-	        String weitererWaldbrandId = UUID.randomUUID().toString();
-	        eventManager.ereignisRegistrieren(new WaldbrandEvent(weitererWaldbrandId, 6, "Amazonas", LocalDate.of(2022, 7, 15), 80000, "Umfangreiche Brände im Regenwaldgebiet"));
+	        String WaldbrandId = UUID.randomUUID().toString();
+	        eventManager.ereignisRegistrieren(new WaldbrandEvent(WaldbrandId, 6, "Amazonas", LocalDate.of(2022, 7, 15), 80000, "Umfangreiche Brände im Regenwaldgebiet"));
 
 	        // Teams den Naturkatastrophen zuweisen
 	        String registrierungId1 = UUID.randomUUID().toString();
@@ -43,7 +43,7 @@ public class Hauptprogramm {
 	        eventManager.benutzerRegistrieren(new EventRegistration(registrierungId2, team2, eventManager.getEreignis(tsunamiId)));
 	        
 	        String registrierungIdWeitererWaldbrand = UUID.randomUUID().toString();
-	        eventManager.benutzerRegistrieren(new EventRegistration(registrierungIdWeitererWaldbrand, team1, eventManager.getEreignis(weitererWaldbrandId)));
+	        eventManager.benutzerRegistrieren(new EventRegistration(registrierungIdWeitererWaldbrand, team1, eventManager.getEreignis(WaldbrandId)));
 
 	        // Ausgabe der Teams
 	        System.out.println("Alle Teams:");
