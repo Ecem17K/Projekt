@@ -1,39 +1,51 @@
 package hka.info3.projekt;
 
-import java.util.List;
-import java.util.ArrayList;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Collection;
 
 public class EventManager {
-    private List<Event> ereignisse;
-    private List<EventRegistration> registrierungen;
+	
+    // Speichert Ereignisse mit ihrer ID als Schlüssel
+    private Map<String, Event> ereignisseMap;
+
+    // Speichert Registrierungen mit ihrer ID als Schlüssel
+    private Map<String, EventRegistration> registrierungenMap;
 
     public EventManager() {
-        this.ereignisse = new ArrayList<>();
-        this.registrierungen = new ArrayList<>();
+        // Hashmaps erstellen
+        this.ereignisseMap = new HashMap<>();
+        this.registrierungenMap = new HashMap<>();
     }
 
+    // Fügt ein Ereignis zur Map hinzu
     public void ereignisRegistrieren(Event event) {
-        ereignisse.add(event);
+        ereignisseMap.put(event.getEventId(), event);
     }
 
+    // Fügt eine Registrierung zur Map hinzu
     public void benutzerRegistrieren(EventRegistration registrierung) {
-        registrierungen.add(registrierung);
+        registrierungenMap.put(registrierung.getRegistrierungsId(), registrierung);
     }
 
+    // Gibt ein Ereignis anhand seiner ID zurück
     public Event getEreignis(String eventId) {
-        for (Event event : ereignisse) {
-            if (event.getEventId().equals(eventId)) {
-                return event;
-            }
-        }
-        return null;
+        return ereignisseMap.get(eventId);
     }
 
-    public List<Event> getAlleEreignisse() {
-        return new ArrayList<>(ereignisse);
+    // Gibt alle Ereignisse zurück
+    public Collection<Event> getAlleEreignisse() {
+        return ereignisseMap.values();
     }
 
-    public List<EventRegistration> getAlleRegistrierungen() {
-        return new ArrayList<>(registrierungen);
+    // Gibt eine Registrierung anhand ihrer ID zurück
+    public EventRegistration getRegistrierung(String registrierungsId) {
+        return registrierungenMap.get(registrierungsId);
     }
+
+    // Gibt alle Registrierungen zurück
+    public Collection<EventRegistration> getAlleRegistrierungen() {
+        return registrierungenMap.values();
+    }
+
 }
