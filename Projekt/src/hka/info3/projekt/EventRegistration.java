@@ -6,13 +6,9 @@ public class EventRegistration {
     private Event ereignis;
 
     public EventRegistration(String registrierungsId, Team team, Event ereignis) {
-        this.registrierungsId = registrierungsId;
+        this.setRegistrierungsId(registrierungsId);
         this.team = team;
         this.ereignis = ereignis;
-    }
-
-    public String getRegistrierungsId() {
-        return registrierungsId;
     }
 
     public Team getTeam() {
@@ -22,4 +18,12 @@ public class EventRegistration {
     public Event getEreignis() {
         return ereignis;
     }
+
+	public String getRegistrierungsId() {
+		return registrierungsId;
+	}
+
+	public void setRegistrierungsId(String registrierungsId) {
+		this.registrierungsId = registrierungsId;
+	}
 }

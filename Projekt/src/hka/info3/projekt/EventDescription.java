@@ -1,18 +1,12 @@
 package hka.info3.projekt;
 
 public class EventDescription {
-    private int schweregrad;
     private String ort;
     private String besonderheit;
 
-    public EventDescription(int schweregrad, String ort, String besonderheit) {
-        this.schweregrad = schweregrad;
+    public EventDescription(String ort, String besonderheit) {
         this.ort = ort;
         this.besonderheit = besonderheit;
-    }
-
-    public int getSchweregrad() {
-        return schweregrad;
     }
 
     public String getOrt() {

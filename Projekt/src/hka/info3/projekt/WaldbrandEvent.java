@@ -6,7 +6,7 @@ public class WaldbrandEvent extends Event {
     private int ausdehnung;  // in Hektar
 
     public WaldbrandEvent(String eventId, int schweregrad, String ort, LocalDate datum, int ausdehnung, String besonderheit) {
-        super(eventId, EventType.WALDBRAND, new EventDescription(schweregrad, ort, besonderheit), datum);
+        super(eventId, EventType.WALDBRAND, new EventDescription(ort, besonderheit), datum);
         this.ausdehnung = ausdehnung;
     }
 

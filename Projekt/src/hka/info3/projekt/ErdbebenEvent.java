@@ -6,7 +6,7 @@ public class ErdbebenEvent extends Event {
     private int staerke;
 
     public ErdbebenEvent(String eventId, int schweregrad, String ort, LocalDate datum, int staerke, String besonderheit) {
-        super(eventId, EventType.ERDBEBEN, new EventDescription(schweregrad, ort, besonderheit), datum);
+        super(eventId, EventType.ERDBEBEN, new EventDescription(ort, besonderheit), datum);
         this.staerke = staerke;
     }
 

@@ -3,12 +3,10 @@ package hka.info3.projekt;
 public class Scientist {
     private String name;
     private String fachgebiet;
-    private int erfahrungsjahre;
 
     public Scientist(String name, String fachgebiet, int erfahrungsjahre) {
         this.name = name;
         this.fachgebiet = fachgebiet;
-        this.erfahrungsjahre = erfahrungsjahre;
     }
 
     public String getName() {
@@ -17,9 +15,5 @@ public class Scientist {
 
     public String getFachgebiet() {
         return fachgebiet;
-    }
-
-    public int getErfahrungsjahre() {
-        return erfahrungsjahre;
     }
 }

@@ -18,10 +18,6 @@ public class TeamManager {
         teams.put(teamId, team);
     }
 
-    public Team getTeam(String teamId) {
-        return teams.get(teamId);
-    }
-
     public Collection<Team> getAlleTeams() {
         return teams.values();
     }
