@@ -13,6 +13,8 @@ public class Hauptprogramm {
 	        Scientist teamLeiter = new Scientist("Dr. Müller", "Geophysik", 15);
 	        Scientist mitglied1 = new Scientist("Dr. Schmidt", "Meteorologie", 10);
 	        Scientist mitglied2 = new Scientist("Dr. Fischer", "Hydrologie", 8);
+	        Scientist mitglied3 = new Scientist("Dr. Bauer", "Seismologie", 7);
+	        Scientist mitglied4 = new Scientist("Dr. Klein", "Geologie", 9);
 
 	        // Teams erstellen und registrieren
 	        Team team1 = new Team(teamLeiter);
@@ -21,8 +23,8 @@ public class Hauptprogramm {
 	        teamManager.teamRegistrieren(team1);
 
 	        Team team2 = new Team(teamLeiter);
-	        team2.mitgliedHinzufuegen(new Scientist("Dr. Bauer", "Seismologie", 7));
-	        team2.mitgliedHinzufuegen(new Scientist("Dr. Klein", "Geologie", 9));
+	        team2.mitgliedHinzufuegen(mitglied3);
+	        team2.mitgliedHinzufuegen(mitglied4);
 	        teamManager.teamRegistrieren(team2);
 
 	        // Naturkatastrophen erstellen und registrieren
@@ -42,8 +44,8 @@ public class Hauptprogramm {
 	        String registrierungId2 = UUID.randomUUID().toString();
 	        eventManager.benutzerRegistrieren(new EventRegistration(registrierungId2, team2, eventManager.getEreignis(tsunamiId)));
 	        
-	        String registrierungIdWeitererWaldbrand = UUID.randomUUID().toString();
-	        eventManager.benutzerRegistrieren(new EventRegistration(registrierungIdWeitererWaldbrand, team1, eventManager.getEreignis(WaldbrandId)));
+	        String registrierungId3 = UUID.randomUUID().toString();
+	        eventManager.benutzerRegistrieren(new EventRegistration(registrierungId3, team1, eventManager.getEreignis(WaldbrandId)));
 
 	        // Ausgabe der Teams
 	        System.out.println("Alle Teams:");
@@ -93,6 +95,9 @@ public class Hauptprogramm {
 	                System.out.println("> Ausdehnung: " + waldbrand.getAusdehnung() + " Hektar");
 	            }
 	           System.out.println();
+	           
+	           
+	           
 	        }
 	    }
 	}
