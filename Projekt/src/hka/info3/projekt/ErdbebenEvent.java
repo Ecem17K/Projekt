@@ -13,4 +13,9 @@ public class ErdbebenEvent extends Event {
     public int getStaerke() {
         return staerke;
     }
+
+    @Override
+    public void printDetails() {
+        System.out.println("Stärke: " + this.getStaerke() + " (Richterskala)");
+    }
 }

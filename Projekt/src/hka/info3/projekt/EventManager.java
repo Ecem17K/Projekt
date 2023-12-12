@@ -38,11 +38,6 @@ public class EventManager {
         return ereignisseMap.values();
     }
 
-    // Gibt eine Registrierung anhand ihrer ID zurück
-    public EventRegistration getRegistrierung(String registrierungsId) {
-        return registrierungenMap.get(registrierungsId);
-    }
-
     // Gibt alle Registrierungen zurück
     public Collection<EventRegistration> getAlleRegistrierungen() {
         return registrierungenMap.values();

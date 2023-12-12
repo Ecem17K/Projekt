@@ -3,7 +3,7 @@ package hka.info3.projekt;
 import java.time.LocalDate;
 
 public class WaldbrandEvent extends Event {
-    private int ausdehnung;  // in Hektar
+    private int ausdehnung;
 
     public WaldbrandEvent(String eventId, int schweregrad, String ort, LocalDate datum, int ausdehnung, String besonderheit) {
         super(eventId, EventType.WALDBRAND, new EventDescription(ort, besonderheit), datum);
@@ -12,5 +12,10 @@ public class WaldbrandEvent extends Event {
 
     public int getAusdehnung() {
         return ausdehnung;
+    }
+    
+    @Override
+    public void printDetails() {
+        System.out.println("Ausdehnung: " + this.getAusdehnung() + " Hektar");
     }
 }

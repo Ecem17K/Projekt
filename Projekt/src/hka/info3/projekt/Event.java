@@ -1,7 +1,6 @@
 package hka.info3.projekt;
 
 import java.util.Random;
-
 import java.util.Arrays;
 import java.util.List;
 import java.time.LocalDate;
@@ -52,4 +51,7 @@ public abstract class Event {
     public LocalDate getDatum() {
         return datum;
     }
+
+    // Abstrakte Methode, die in den abgeleiteten Klassen überschrieben wird
+    public abstract void printDetails();
 }

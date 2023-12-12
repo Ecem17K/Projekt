@@ -25,4 +25,11 @@ public class TsunamiEvent extends Event {
     public int getBreite() {
         return breite;
     }
+
+    @Override
+    public void printDetails() {
+        System.out.println("Höhe: " + this.getHoehe() + " Meter");
+        System.out.println("Geschwindigkeit: " + this.getGeschwindigkeit() + " km/h");
+        System.out.println("Breite: " + this.getBreite() + " km");
+    }
 }

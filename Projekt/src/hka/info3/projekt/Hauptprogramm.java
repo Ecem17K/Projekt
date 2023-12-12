@@ -69,27 +69,17 @@ public class Hauptprogramm {
         System.out.println("Benutzer Registrierungen:");
         System.out.println("-------------------------");
         for (EventRegistration registrierung : eventManager.getAlleRegistrierungen()) {
-            EventRegistration abgerufeneRegistrierung = eventManager.getRegistrierung(registrierung.getRegistrierungsId());
-            Event registriertesEreignis = abgerufeneRegistrierung.getEreignis();          
+            Event registriertesEreignis = registrierung.getEreignis();
             System.out.println("Registrierungs-ID: " + registrierung.getRegistrierungsId());
             System.out.println("Team: " + registrierung.getTeam().getTeamId());
             System.out.println("Katastrophe: " + registriertesEreignis.getEventName());
             System.out.println("Datum der Katastrophe: " + registriertesEreignis.getDatum());
             System.out.println("Beschreibung: " + registriertesEreignis.getDescription().getBesonderheit());
-            
-            // Spezifische Details für jeden Ereignistyp
-            if (registriertesEreignis instanceof ErdbebenEvent) {
-                System.out.println("Stärke: " + ((ErdbebenEvent) registriertesEreignis).getStaerke() + " (Richterskala)");
-            } else if (registriertesEreignis instanceof TsunamiEvent) {
-                TsunamiEvent tsunamiEvent = (TsunamiEvent) registriertesEreignis;
-                System.out.println("Höhe: " + tsunamiEvent.getHoehe() + " Meter");
-                System.out.println("Geschwindigkeit: " + tsunamiEvent.getGeschwindigkeit() + " km/h");
-                System.out.println("Breite: " + tsunamiEvent.getBreite() + " km");
-            } else if (registriertesEreignis instanceof WaldbrandEvent) {// hier nochmal Anschauen 
-                WaldbrandEvent waldbrandEvent = (WaldbrandEvent) registriertesEreignis;
-                System.out.println("Ausdehnung: " + waldbrandEvent.getAusdehnung() + " Hektar");
-            }
+
+            // Rufen Sie die printDetails-Methode auf
+            registriertesEreignis.printDetails();
             System.out.println();
         }
-    }
+
+        }
 }
