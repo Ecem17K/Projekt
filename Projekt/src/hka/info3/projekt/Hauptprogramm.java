@@ -31,9 +31,9 @@ public class Hauptprogramm {
         String tsunamiId = UUID.randomUUID().toString();
         String waldbrandId = UUID.randomUUID().toString();
 
-        eventManager.ereignisRegistrieren(new ErdbebenEvent(erdbebenId, 8, "Tokio", LocalDate.of(2021, 3, 11), 9, "Starke Erschütterungen"));
-        eventManager.ereignisRegistrieren(new TsunamiEvent(tsunamiId, 9, "Jakarta", LocalDate.of(2004, 12, 26), 15, 80, 300, "Hohe Wellen"));
-        eventManager.ereignisRegistrieren(new WaldbrandEvent(waldbrandId, 6, "Amazonas", LocalDate.of(2022, 7, 15), 80000, "Umfangreiche Brände im Regenwaldgebiet"));
+        eventManager.ereignisRegistrieren(new ErdbebenEvent(erdbebenId, "Tokio", LocalDate.of(2021, 3, 11), 9, "Starke Erschütterungen"));        															
+        eventManager.ereignisRegistrieren(new TsunamiEvent(tsunamiId, "Jakarta", LocalDate.of(2004, 12, 26), 15, 80, 300, "Hohe Wellen"));
+        eventManager.ereignisRegistrieren(new WaldbrandEvent(waldbrandId, "Amazonas", LocalDate.of(2022, 7, 15), 80000, "Umfangreiche Brände im Regenwaldgebiet"));
 
         // Teams den Naturkatastrophen zuweisen und Registrierungen abrufen
         eventManager.benutzerRegistrieren(new EventRegistration(UUID.randomUUID().toString(), team1, eventManager.getEreignis(erdbebenId)));

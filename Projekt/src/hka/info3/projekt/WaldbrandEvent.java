@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class WaldbrandEvent extends Event {
     private int ausdehnung;
 
-    public WaldbrandEvent(String eventId, int schweregrad, String ort, LocalDate datum, int ausdehnung, String besonderheit) {
+    public WaldbrandEvent(String eventId, String ort, LocalDate datum, int ausdehnung, String besonderheit) {
         super(eventId, EventType.WALDBRAND, new EventDescription(ort, besonderheit), datum);
         this.ausdehnung = ausdehnung;
     }

@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class ErdbebenEvent extends Event {
     private int staerke;
 
-    public ErdbebenEvent(String eventId, int schweregrad, String ort, LocalDate datum, int staerke, String besonderheit) {
+    public ErdbebenEvent(String eventId, String ort, LocalDate datum, int staerke, String besonderheit) {
         super(eventId, EventType.ERDBEBEN, new EventDescription(ort, besonderheit), datum);
         this.staerke = staerke;
     }
@@ -16,6 +16,6 @@ public class ErdbebenEvent extends Event {
 
     @Override
     public void printDetails() {
-        System.out.println("Stärke: " + this.getStaerke() + " (Richterskala)");
+        System.out.println("Stärke: " + this.getStaerke() + " Mw");
     }
 }
